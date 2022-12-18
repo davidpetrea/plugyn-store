@@ -12,6 +12,15 @@ module.exports = {
    backgroundImage: {
     main: "url('/mainBg.jpg')",
    },
+   colors: {
+    white: {
+     DEFAULT: '#F7F6F3',
+    },
+    gold: {
+     DEFAULT: '#E1C440',
+     soft: '#DFC777',
+    },
+   },
   },
  },
  plugins: [],
