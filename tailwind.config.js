@@ -16,6 +16,9 @@ module.exports = {
     white: {
      DEFAULT: '#F7F6F3',
     },
+    grey: {
+     DEFAULT: '#BFBFBF',
+    },
     gold: {
      DEFAULT: '#E1C440',
      soft: '#DFC777',

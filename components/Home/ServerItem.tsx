@@ -4,7 +4,7 @@ import Link from 'next/link';
 const ServerItem = ({ server }: { server: Server }) => {
  return (
   <div className='flex flex-col items-center bg-black border bg-opacity-30 border-gold-soft rounded-mg'>
-   <div className='w-5/6 pt-2 text-lg font-medium text-center border-b border-gold-soft'>
+   <div className='w-5/6 pt-2 text-lg font-medium text-center uppercase border-b border-gold-soft'>
     {server.name}
    </div>
    <div className='flex flex-col items-center gap-2 py-2'>
