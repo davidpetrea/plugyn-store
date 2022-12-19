@@ -31,6 +31,7 @@ const Footer = () => {
      <p className='font-bold uppercase text-opacity-30 text-grey'>
       Information
      </p>
+     <FooterLink href='/store' title='Store' />
      <FooterLink href='/how' title='How it works' />
      <FooterLink href='/reviews' title='Reviews' />
      <FooterLink href='/about' title='About us' />
