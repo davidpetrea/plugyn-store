@@ -1,5 +1,5 @@
 'use client';
-import { useState, ChangeEvent } from 'react';
+import { useState } from 'react';
 
 type ValidSection = 'official' | 'private';
 
@@ -38,7 +38,6 @@ const PriceList = () => {
      Private Servers
     </button>
    </div>
-   <p className='capitalize'>Current section: {currentSection}</p>
   </section>
  );
 };

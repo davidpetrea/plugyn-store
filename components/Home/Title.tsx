@@ -1,6 +1,7 @@
 import Link from 'next/link';
 
 const Title = () => {
+
  return (
   <section className='flex flex-col w-full'>
    <div className='p-4 lg:p-8'></div>
