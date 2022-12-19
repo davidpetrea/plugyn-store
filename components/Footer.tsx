@@ -43,24 +43,24 @@ const Footer = () => {
      <FooterLink
       href={discordLink}
       title='PlugynStore#8189'
-      icon={<DiscordIcon fill='#BFBFBF' />}
+      icon={<DiscordIcon />}
      />
 
      <FooterLink
       href={skypeLink}
       title='live:plugynStore'
-      icon={<SkypeIcon fill='#BFBFBF' />}
+      icon={<SkypeIcon />}
      />
 
      <FooterLink
       href={epvpLink}
       title='ElitePvPers Profile'
-      icon={<EpvpIcon fill='#BFBFBF' />}
+      icon={<EpvpIcon />}
      />
      <FooterLink
       href={mailLink}
       title='support@plugynstore.com'
-      icon={<MailIcon fill='#BFBFBF' />}
+      icon={<MailIcon />}
      />
     </div>
    </div>
@@ -86,15 +86,13 @@ const FooterLink = ({
 }): JSX.Element => {
  if (icon)
   return (
-   <div className='flex items-center gap-1'>
+   <Link
+    href={href}
+    className='flex items-center gap-1 transition duration-200 ease-linear hover:text-white'
+   >
     {icon}
-    <Link
-     href={href}
-     className='transition ease-linear hover:text-white duration'
-    >
-     {title}
-    </Link>
-   </div>
+    <div className=''>{title}</div>
+   </Link>
   );
 
  return (

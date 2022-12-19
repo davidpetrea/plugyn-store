@@ -38,8 +38,8 @@ const NavLink = ({ href, title }: { href: string; title: string }) => {
    className={`${
     isActive
      ? 'text-gold-soft border-gold'
-     : 'hover:text-gold-soft hover:border-gold'
-   } transition duration-150 ease-linear border-b border-transparent `}
+     : 'hover:text-gold-soft hover:border-gold border-transparent'
+   } transition duration-150 ease-linear border-b`}
   >
    {title}
   </Link>

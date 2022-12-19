@@ -4,6 +4,12 @@ import Dialog from '@/common/Dialog';
 import Transition from '@/common/Transition';
 import Link from 'next/link';
 import { discordLink, skypeLink, epvpLink, mailLink } from 'utils/contacts';
+import {
+ DiscordIcon,
+ SkypeIcon,
+ EpvpIcon,
+ MailIcon,
+} from '@/svg/SvgComponents';
 const ContactModal = () => {
  const [isOpen, setIsOpen] = useState(false);
  const closeModal = () => {
@@ -60,9 +66,22 @@ const ContactModal = () => {
           <ContactLink
            href={discordLink}
            title='PlugynStore#8189'
-           icon={
-            <Image src='/discord.svg' alt='Discord' width={20} height={20} />
-           }
+           icon={<DiscordIcon />}
+          />
+          <ContactLink
+           href={skypeLink}
+           title='live:plugynStore'
+           icon={<SkypeIcon />}
+          />
+          <ContactLink
+           href={epvpLink}
+           title='ElitePvPers Profile'
+           icon={<EpvpIcon />}
+          />
+          <ContactLink
+           href={mailLink}
+           title='support@plugynstore.com'
+           icon={<MailIcon />}
           />
          </div>
 
@@ -89,13 +108,13 @@ const ContactLink = ({
 }: {
  href: string;
  title: string;
- icon?: ReactComponentElement<typeof Image>;
+ icon?: JSX.Element;
 }): JSX.Element => {
  if (icon)
   return (
    <Link
     href={href}
-    className='flex items-center gap-2 p-2 px-6 font-medium text-black transition ease-linear border-2 border-black rounded-md duration hover:text-white hover:bg-black'
+    className='flex items-center w-full gap-2 p-2 px-6 font-medium text-black transition ease-linear border-2 border-black rounded-md duration hover:text-white hover:bg-black'
    >
     {icon}
     <div>{title}</div>
