@@ -1,6 +1,8 @@
 'use client';
 import Image from 'next/image';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+
 const Navbar = () => {
  return (
   <nav className='sticky top-0 w-full p-2 bg-black border-b border-grey bg-opacity-30 p- backdrop-blur-sm '>
@@ -10,24 +12,10 @@ const Navbar = () => {
     </Link>
     {/* Large view links */}
     <div className='items-center justify-end flex-1 hidden gap-16 lg:flex'>
-     <Link
-      href='/how'
-      className='transition duration-150 ease-linear border-b border-transparent hover:text-gold-soft hover:border-gold'
-     >
-      How it works
-     </Link>
-     <Link
-      href='/reviews'
-      className='transition duration-150 ease-linear border-b border-transparent hover:text-gold-soft hover:border-gold'
-     >
-      Reviews
-     </Link>
-     <Link
-      href='/about'
-      className='transition duration-150 ease-linear border-b border-transparent hover:text-gold-soft hover:border-gold'
-     >
-      About us
-     </Link>
+     <NavLink href='/how' title='How it works' />
+     <NavLink href='/reviews' title='Reviews' />
+     <NavLink href='/faq' title='FAQ' />
+     <NavLink href='/about' title='About us' />
      <button className='transition duration-150 ease-linear border-b border-transparent hover:text-gold-soft hover:border-gold'>
       Contact
      </button>
@@ -38,6 +26,24 @@ const Navbar = () => {
     </button>
    </div>
   </nav>
+ );
+};
+
+const NavLink = ({ href, title }: { href: string; title: string }) => {
+ const path = usePathname();
+ const isActive = href === path;
+
+ return (
+  <Link
+   href={href}
+   className={`${
+    isActive
+     ? 'text-gold-soft border-gold'
+     : 'hover:text-gold-soft hover:border-gold'
+   } transition duration-150 ease-linear border-b border-transparent `}
+  >
+   {title}
+  </Link>
  );
 };
 
