@@ -1,4 +1,4 @@
-import ServersList from 'components/Home/ServersList';
+import ServersList from 'components/store/ServersList';
 
 async function getServers() {
  const res = await fetch('http://localhost:3000/api/servers');
