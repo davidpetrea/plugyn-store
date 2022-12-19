@@ -14,7 +14,7 @@ const ServerSchema = new Schema({
  },
  section: {
   type: String,
-  enum: ['official', 'server'],
+  enum: ['official', 'private'],
   required: true,
  },
 });
