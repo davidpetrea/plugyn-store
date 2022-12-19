@@ -3,7 +3,8 @@
   "baseUrl": ".",
   "paths": {
    "@/common/*": ["components/common/*"],
-   "@/modals/*": ["components/modals/*"]
+   "@/modals/*": ["components/modals/*"],
+   "@/svg/*": ["assets/svg/*"]
   },
   "target": "es5",
   "lib": ["dom", "dom.iterable", "esnext"],

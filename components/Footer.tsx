@@ -2,6 +2,13 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { ReactComponentElement } from 'react';
 import { discordLink, skypeLink, epvpLink, mailLink } from 'utils/contacts';
+import {
+ DiscordIcon,
+ SkypeIcon,
+ EpvpIcon,
+ MailIcon,
+} from '@/svg/SvgComponents';
+
 const Footer = () => {
  return (
   <footer className='p-4 bg-black bg-opacity-50 border-t border-grey'>
@@ -36,26 +43,24 @@ const Footer = () => {
      <FooterLink
       href={discordLink}
       title='PlugynStore#8189'
-      icon={<Image src='/discord.svg' alt='Discord' width={20} height={20} />}
+      icon={<DiscordIcon fill='#BFBFBF' />}
      />
 
      <FooterLink
       href={skypeLink}
       title='live:plugynStore'
-      icon={<Image src='/skype.svg' alt='Skype' width={18} height={18} />}
+      icon={<SkypeIcon fill='#BFBFBF' />}
      />
 
      <FooterLink
       href={epvpLink}
-      title='ElitePvPers.com'
-      icon={<Image src='/epvpicon.png' alt='EPVP' width={20} height={20} />}
+      title='ElitePvPers Profile'
+      icon={<EpvpIcon fill='#BFBFBF' />}
      />
      <FooterLink
       href={mailLink}
       title='support@plugynstore.com'
-      icon={
-       <Image src='/mail.svg' color='white' alt='Mail' width={20} height={20} />
-      }
+      icon={<MailIcon fill='#BFBFBF' />}
      />
     </div>
    </div>
