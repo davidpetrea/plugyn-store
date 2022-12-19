@@ -83,7 +83,7 @@ const FooterLink = ({
 }: {
  href: string;
  title: string;
- icon?: ReactComponentElement<typeof Image>;
+ icon?: JSX.Element;
 }): JSX.Element => {
  if (icon)
   return (

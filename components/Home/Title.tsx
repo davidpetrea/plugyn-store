@@ -8,7 +8,7 @@ const Title = () => {
     Welcome to the{' '}
     <span className='border-b text-gold-soft border-gold'>Plugyn Store!</span>
    </h1>
-   <div className='p-4 lg:p-12'></div>
+   <div className='p-4 lg:p-8'></div>
    <h2 className='text-xl font-bold text-center text-white uppercase'>
     Get cheap yang on your favourite{' '}
     <span className='text-gold-soft'>Metin2 Server </span>and become the
