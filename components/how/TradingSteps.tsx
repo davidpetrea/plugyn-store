@@ -1,3 +1,11 @@
+import {
+  BTCIcon,
+  LTCIcon,
+  PaypalIcon,
+  RevolutIcon,
+  SkrillIcon,
+  XLMIcon,
+} from "@/svg/SvgComponents";
 import Link from "next/link";
 import { ReactElement } from "react";
 import { discordLink } from "utils/contacts";
@@ -48,6 +56,16 @@ const TradingSteps = () => {
               choose your preferred payment method from the ones listed below.
             </>
           }
+          icons={
+            <div className="py-4 flex flex-wrap gap-6 items-center justify-center">
+              <PaypalIcon />
+              <SkrillIcon />
+              <BTCIcon />
+              <XLMIcon />
+              <LTCIcon />
+              <RevolutIcon />
+            </div>
+          }
         />
         <Step
           step={4}
@@ -74,9 +92,10 @@ const TradingSteps = () => {
 type StepProps = {
   text: ReactElement;
   step: number;
+  icons?: ReactElement;
 };
 
-const Step = ({ text, step }: StepProps) => {
+const Step = ({ text, step, icons }: StepProps) => {
   return (
     <div className="flex flex-col items-center">
       <p className="lining-nums text-3xl font-bold text-gold-soft rounded-full border-[3px] border-gold-soft w-10 h-10 flex items-center justify-center">
@@ -85,6 +104,7 @@ const Step = ({ text, step }: StepProps) => {
       <div className="p-1"></div>
       <hr className="border-gold-soft w-full max-w-lg" />
       <p className="max-w-lg text-center font-medium">{text}</p>
+      {icons ? icons : null}
       <div className="p-4"></div>
     </div>
   );
