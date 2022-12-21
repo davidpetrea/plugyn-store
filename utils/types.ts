@@ -14,3 +14,19 @@ export type Server = {
  amount: string;
  section: string;
 };
+
+export type EpvpData = {
+ success: boolean;
+ error: null | string;
+ data: null | {
+  id: string;
+  username: string;
+  ratings: {
+   theblackmarket: {
+    positive: number;
+    neutral: number;
+    negative: number;
+   };
+  };
+ };
+};
