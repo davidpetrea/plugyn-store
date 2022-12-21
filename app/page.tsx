@@ -1,6 +1,6 @@
-import ChooseUs from "components/Home/ChooseUs";
-import Title from "../components/Home/Title";
-import EpvpSection from "components/Home/EpvpSection";
+import ChooseUs from "components/home/ChooseUs";
+import Title from "../components/home/Title";
+import EpvpSection from "components/home/EpvpSection";
 import { EpvpData } from "utils/types";
 
 const getEpvpInfo = async () => {

@@ -1,7 +1,11 @@
+import Title from "components/how/Title";
+import TradingSteps from "components/how/TradingSteps";
+
 export default function HowItWorks() {
- return (
-  <div className='p-4'>
-   <div className='text-2xl'>How It Works page</div>
-  </div>
- );
+  return (
+    <div>
+      <Title />
+      <TradingSteps />
+    </div>
+  );
 }
