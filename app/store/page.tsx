@@ -10,7 +10,7 @@ async function getServers() {
 
 export default async function Page() {
   const servers = (await getServers()) as Server[];
-  console.log(servers);
+
   if (!servers.length) return null;
   return <ServersList servers={servers} />;
 }

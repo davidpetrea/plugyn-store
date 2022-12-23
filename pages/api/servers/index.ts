@@ -22,7 +22,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   // Post requests
   POST: async (req: NextApiRequest, res: NextApiResponse) => {
    await connect(); // connect to database
-   console.log(req.body);
 
    const newServer = await Server.create(req.body).catch(catcher);
 

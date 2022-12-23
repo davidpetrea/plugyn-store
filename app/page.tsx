@@ -12,13 +12,12 @@ const getEpvpInfo = async () => {
     // This will activate the closest `error.js` Error Boundary
     throw new Error("Failed to fetch data");
   }
-  console.log(res);
+
   return res.json();
 };
 
 const Home = async () => {
   const epvpInfo = (await getEpvpInfo()) as EpvpData;
-  console.log(epvpInfo);
 
   return (
     <div>
