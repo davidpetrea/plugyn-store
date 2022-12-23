@@ -15,8 +15,8 @@ async function getServers() {
     // This will activate the closest `error.js` Error Boundary
     throw new Error("Failed to fetch data");
   }
-
-  return res.json();
+  const data = await res.json();
+  return data;
 }
 
 export default async function Page() {
