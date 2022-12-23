@@ -1,6 +1,18 @@
 import * as React from "react";
 import { SVGProps } from "react";
 
+export const ArrowIcon = (props: SVGProps<SVGSVGElement>) => (
+  <svg
+    width={14}
+    height={14}
+    fill="currentColor"
+    xmlns="http://www.w3.org/2000/svg"
+    {...props}
+  >
+    <path d="M6.934 3.222c-.272.015-.53.125-.73.309L.546 8.713a1.178 1.178 0 1 0 1.591 1.737L7 5.997l4.863 4.453a1.18 1.18 0 1 0 1.591-1.737L7.796 3.531a1.18 1.18 0 0 0-.862-.31Z" />
+  </svg>
+);
+
 export const DiscordIcon = (props: SVGProps<SVGSVGElement>) => (
   <svg
     width={24}
