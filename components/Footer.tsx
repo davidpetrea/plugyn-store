@@ -13,13 +13,13 @@ const Footer = () => {
     <footer className="p-4 bg-black bg-opacity-50 border-t border-grey">
       <div className="flex flex-col items-center gap-4 mx-auto lg:flex-row max-w-7xl justify-evenly">
         {/* Logo & copyrights */}
-        <div>
+        <div className="flex flex-col items-center">
           <Link href="/">
             <Image
               src="/logo-footer.png"
               alt="PS logo"
-              width={210}
-              height={210}
+              width={256}
+              height={144}
               className="opacity-70"
             />
           </Link>
