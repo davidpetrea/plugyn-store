@@ -1,4 +1,5 @@
 import ServersList from "components/store/ServersList";
+import { Server } from "utils/types";
 
 async function getServers() {
   console.log("env?", process.env.API_URL);
@@ -18,7 +19,8 @@ async function getServers() {
 }
 
 export default async function Page() {
-  const servers = await getServers();
+  const servers = (await getServers()) as Server[];
   console.log(servers);
+  if (!servers.length) return null;
   return <ServersList servers={servers} />;
 }
