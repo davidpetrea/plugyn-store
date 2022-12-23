@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import ContactModal from "@/modals/ContactModal";
+import MobileNavModal from "./modals/MobileNavModal";
 
 const Navbar = () => {
   return (
@@ -20,9 +21,7 @@ const Navbar = () => {
           <ContactModal />
         </div>
         {/* Mobile menu */}
-        <button onClick={() => console.log("hopa")} className="lg:hidden">
-          <Image src="/menu.svg" alt="Menu" width={32} height={32} />
-        </button>
+        <MobileNavModal />
       </div>
     </nav>
   );

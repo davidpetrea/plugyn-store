@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { epvpLink, trustpilotLink } from "utils/contacts";
 
 const Title = () => {
   return (
@@ -24,7 +25,7 @@ const Title = () => {
           VISIT STORE
         </Link>
         <Link
-          href="/reviews"
+          href={trustpilotLink}
           className="w-full max-w-md p-3 text-xs font-medium uppercase transition duration-200 ease-linear border rounded-sm lg:px-12 border-gold-soft hover:bg-black hover:bg-opacity-70 lg:text-base"
         >
           Check our reviews

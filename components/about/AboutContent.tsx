@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { epvpLink } from "utils/contacts";
+import { epvpLink, trustpilotLink } from "utils/contacts";
 
 const AboutContent = () => {
   return (
@@ -36,7 +36,7 @@ const AboutContent = () => {
         </Link>
 
         <Link
-          href="https://www.trustpilot.com/review/plugynstore.com"
+          href={trustpilotLink}
           target="_blank"
           rel="noreferrer"
           className="w-full max-w-md p-3 text-xs font-medium uppercase transition duration-200 ease-linear bg-black border rounded-sm lg:w-auto lg:px-12 bg-opacity-70 border-green-400 hover:text-black hover:bg-green-400"

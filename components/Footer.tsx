@@ -26,7 +26,7 @@ const Footer = () => {
           <p className="text-sm text-grey">Copyright © Plugyn Store 2022</p>
         </div>
         {/* Information links */}
-        <div className="flex flex-col items-center gap-1 text-sm text-grey">
+        <div className="flex flex-col items-center gap-1 text-sm text-grey font-medium">
           <p className="font-bold uppercase text-opacity-30 text-grey">
             Information
           </p>
@@ -36,7 +36,7 @@ const Footer = () => {
           <FooterLink href="/faq" title="FAQ" />
         </div>
         {/* Contacts */}
-        <div className="flex flex-col items-center gap-1 text-sm text-grey">
+        <div className="flex flex-col items-center gap-1 text-sm text-grey font-medium">
           <p className="font-bold uppercase text-opacity-30 text-grey">
             Contact us
           </p>
