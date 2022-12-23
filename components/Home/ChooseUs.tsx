@@ -64,6 +64,7 @@ const ChooseUs = () => {
         Icon={SecureIcon}
         iconOnRight={false}
       />
+      
       <TraitItem
         text={
           <>
