@@ -37,9 +37,9 @@ const TradingSteps = () => {
           step={2}
           text={
             <>
-              Once you decided the server you want to buy gold or yang on,
-              contact us over Discord, Skype or the Live Chat so we can discuss
-              the payment. Please note that Discord{" "}
+              Once you have decided the server and the amount of yang you would
+              like to purchase, contact us over Discord, Skype or the Live Chat
+              so we can discuss the payment. Please note that Discord{" "}
               <Link href={discordLink} className="text-gold-soft">
                 (PlugynStore#8189)
               </Link>{" "}
