@@ -5,12 +5,16 @@ import { Server } from "utils/types";
 
 async function getServers() {
   await connect(); // connect to database
-  return (await ServerModel.find({})) as Server[];
+  const res = (await ServerModel.find({}).lean()) as Server[];
+
+  return res;
 }
 
 export default async function Page() {
-  const servers = (await getServers()) as Server[];
+  const servers = (await getServers()).map((elem: Server) => {
+    return { ...elem, _id: elem._id.toString() };
+  });
 
   if (!servers.length) return null;
-  return <ServersList servers={servers} />;
+  return <ServersList servers={servers as Server[]} />;
 }
