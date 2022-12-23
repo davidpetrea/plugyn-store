@@ -8,13 +8,14 @@ async function getServers() {
     ? `https://${process.env.VERCEL_URL}`
     : process.env.API_URL;
   console.log("baseUrl?", baseUrl);
+
   const res = await fetch(`${baseUrl}/api/servers`);
 
   if (!res.ok) {
     // This will activate the closest `error.js` Error Boundary
     throw new Error("Failed to fetch data");
   }
-  console.log(res);
+
   return res.json();
 }
 
