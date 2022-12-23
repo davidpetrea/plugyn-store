@@ -6,6 +6,7 @@ async function getServers() {
   const baseUrl = process.env.VERCEL_URL
     ? `https://${process.env.VERCEL_URL}`
     : process.env.API_URL;
+  console.log("baseUrl?", baseUrl);
   const res = await fetch(`${baseUrl}/api/servers`);
 
   if (!res.ok) {
