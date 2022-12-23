@@ -15,7 +15,6 @@ const Navbar = () => {
         <div className="items-center justify-end flex-1 hidden gap-16 lg:flex">
           <NavLink href="/store" title="Store" />
           <NavLink href="/how" title="How it works" />
-          <NavLink href="/reviews" title="Reviews" />
           <NavLink href="/faq" title="FAQ" />
           <NavLink href="/about" title="About us" />
           <ContactModal />

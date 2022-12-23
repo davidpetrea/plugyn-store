@@ -1,7 +1,11 @@
+import AboutContent from "components/about/AboutContent";
+import Title from "components/about/Title";
+
 export default function About() {
- return (
-  <div className='p-4'>
-   <div className='text-2xl'>About us page</div>
-  </div>
- );
+  return (
+    <div>
+      <Title />
+      <AboutContent />
+    </div>
+  );
 }
