@@ -9,7 +9,12 @@ async function getServers() {
     : process.env.API_URL;
   console.log("baseUrl?", baseUrl);
 
-  const res = await fetch(`${baseUrl}/api/servers`);
+  const res = await fetch(`${baseUrl}/api/servers`, {
+    method: "GET",
+    headers: {
+      "Content-Type": "application/json",
+    },
+  });
 
   if (!res.ok) {
     // This will activate the closest `error.js` Error Boundary
