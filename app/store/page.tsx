@@ -1,7 +1,12 @@
 import ServersList from "components/store/ServersList";
 
 async function getServers() {
-  const res = await fetch("/api/servers");
+  console.log("env?", process.env.API_URL);
+  console.log("url?", process.env.VERCEL_URL);
+  const baseUrl = process.env.VERCEL_URL
+    ? `https://${process.env.VERCEL_URL}`
+    : process.env.API_URL;
+  const res = await fetch(`${baseUrl}/api/servers`);
 
   if (!res.ok) {
     // This will activate the closest `error.js` Error Boundary
