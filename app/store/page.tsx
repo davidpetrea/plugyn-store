@@ -19,6 +19,7 @@ async function getServers() {
 
 const Store = async () => {
   const servers = await getServers();
+  console.log(servers);
   return <ServersList servers={servers} />;
 };
 
