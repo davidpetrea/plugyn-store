@@ -17,10 +17,8 @@ async function getServers() {
   return res.json();
 }
 
-const Store = async () => {
+export default async function Store() {
   const servers = await getServers();
   console.log(servers);
   return <ServersList servers={servers} />;
-};
-
-export default Store;
+}
