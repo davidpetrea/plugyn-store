@@ -18,6 +18,10 @@ export default function RootLayout({
           </main>
           <Footer />
         </div>
+        <script
+          src="//code.tidio.co/pswx6wi42fdbu5xr8csf8nbdm2mrxjkr.js"
+          async
+        ></script>
       </body>
     </html>
   );
